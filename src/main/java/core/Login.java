@@ -22,10 +22,9 @@ public class Login {
     public void login(String userName, String password) {
 
         Navigate.to(driver, GeneralContants.HOME_PAGE_URL);
-        driver.findElement(HomePageScreen.loginButton).click();
         driver.findElement(LoginScreen.usernameInput).sendKeys(userName);
         driver.findElement(LoginScreen.passwordInput).sendKeys(password);
         driver.findElement(LoginScreen.submitLoginButton).click();
-        Pause.untilWithXPath(driver, HomePageScreen.logoutButton);
+        Pause.untilWithXPath(driver, HomePageScreen.spacecrafts);
     }
 }

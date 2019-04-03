@@ -11,6 +11,7 @@ import java.net.UnknownHostException;
 
 import org.apache.http.HttpStatus;
 
+import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.http.HttpHeader;
 import com.github.tomakehurst.wiremock.http.HttpHeaders;
 import com.github.tomakehurst.wiremock.stubbing.Scenario;
@@ -21,13 +22,12 @@ import tools.Log;
 public class WireMockServerExample {
 
 
-    private static final int SERVER_PORT = 1488;
-    private static com.github.tomakehurst.wiremock.WireMockServer wireMockServer = new com.github.tomakehurst.wiremock.WireMockServer(options().port(SERVER_PORT).usingFilesUnderDirectory("./src/main/java/tools/mocker"));
-    // private static WireMockServer wireMockServer = new WireMockServer(options().dynamicPort().usingFilesUnderDirectory("./src/main/java/tools/mocker"));
+    private static final int SERVER_PORT = 8081;
+    private static WireMockServer wireMockServer = new WireMockServer(options().port(SERVER_PORT).usingFilesUnderDirectory("./src/main/java/tools/mocker/wiremock_server_example"));
     private static HttpHeader CORS_HEADER = new HttpHeader("Access-Control-Allow-Origin", "*"); // cross origin resource sharing set to all
     private static final HttpHeaders DEFAULT_HEADERS = new HttpHeaders(CORS_HEADER);
 
-    public static void main(String [ ] args) {
+    public static void main(String[] args) {
         startMockServer();
     }
 
@@ -37,7 +37,7 @@ public class WireMockServerExample {
         Log.info("\n---STARTING MOCK SERVER---");
         wireMockServer.stubFor(any(urlMatching("/.*"))
                 .willReturn(aResponse().proxiedFrom(GeneralContants.HOME_PAGE_URL)));
-        audienceScenario(); // TODO maybe delete this
+        courseScenario(); // TODO maybe delete this
         try {
             InetAddress IP = InetAddress.getLocalHost();
             System.out.println(IP.getHostAddress());
@@ -58,7 +58,7 @@ public class WireMockServerExample {
     }
 
 
-    private static void audienceScenario() {
+    private static void courseScenario() {
         String scenarioName = "CreateCourse";
         String[] scenario_states = new String[]{Scenario.STARTED, "CourseCreated", "CourseDeleted"};
 

@@ -5,10 +5,13 @@ import java.io.InputStream;
 import java.util.Properties;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import core.Login;
 import core.constants.GeneralContants;
+import mocker.wiremock_server_example.WireMockServerExample;
+import tools.object_mapper.ObjectMapperFactory;
 
 
 public class MainTest {
@@ -17,6 +20,9 @@ public class MainTest {
 
     @BeforeTest
     public void setUpConfiguration() throws IOException {
+
+        ObjectMapperFactory objectMapperFactory = new ObjectMapperFactory();
+        objectMapperFactory.create();
 
         //set up chrome driver
         System.setProperty(GeneralContants.CHROME_DRIVER_PROPERTY, GeneralContants.CHROME_DRIVER_PATH);
@@ -34,8 +40,17 @@ public class MainTest {
             password = properties.getProperty("password");
         }
 
+        WireMockServerExample.startMockServer();
+
         //login
         Login login = new Login(driver);
         login.login(username, password);
+    }
+
+    @AfterTest
+    public void afterTest(){
+        WireMockServerExample.stopMockServer();
+        driver.close();
+        driver.quit();
     }
 }
