@@ -1,0 +1,60 @@
+[
+  {
+    "id":1,
+    "type":"Manned spacecraft",
+    "name":"Apollo 11",
+    "components":[
+      {
+        "id":1,
+        "readyToUse":false,
+        "name":"Wing",
+        "readyDate":"2019-04-10T15:30:00.364+02:00[Europe/Prague]"
+      },
+      {
+        "id":2,
+        "readyToUse":true,
+        "name":"Fuel tank",
+        "readyDate":null
+      }
+    ]
+  },
+  {
+    "id":2,
+    "type":"Supply rocket",
+    "name":"Falcon 9",
+    "components":[
+      {
+        "id":3,
+        "readyToUse":false,
+        "name":"Engine",
+        "readyDate":"2019-05-15T15:30:00.841+02:00[Europe/Prague]"
+      }
+    ]
+  },
+  {
+    "id":3,
+    "type":"Smuggler ship",
+    "name":"Millenium falcon",
+    "components":[
+      {
+        "id":4,
+        "readyToUse":true,
+        "name":"Cockpit",
+        "readyDate":null
+      }
+    ]
+  },
+  {
+    "id":4,
+    "type":"Added ship",
+    "name":"Millenium FAP FAP falcon",
+    "components":[
+      {
+        "id":5,
+        "readyToUse":true,
+        "name":"Wings",
+        "readyDate":null
+      }
+    ]
+  }
+]

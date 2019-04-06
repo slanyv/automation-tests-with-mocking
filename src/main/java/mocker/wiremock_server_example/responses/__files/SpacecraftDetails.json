@@ -1,0 +1,13 @@
+{
+  "id": 5,
+  "type": "fds",
+  "name": "asd",
+  "components": [
+    {
+      "id": 5,
+      "readyToUse": true,
+      "name": "TestDelete",
+      "readyDate": null
+    }
+  ]
+}
