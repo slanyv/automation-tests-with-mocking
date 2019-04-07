@@ -17,12 +17,16 @@ import tools.object_mapper.ObjectMapperFactory;
 public class MainTest {
 
     protected ChromeDriver driver;
+    protected WireMockServerExample wireMockServerExample;
 
     @BeforeTest
     public void setUpConfiguration() throws IOException {
 
         ObjectMapperFactory objectMapperFactory = new ObjectMapperFactory();
         objectMapperFactory.create();
+
+        wireMockServerExample = new WireMockServerExample();
+        wireMockServerExample.startMockServer();
 
         //set up chrome driver
         System.setProperty(GeneralContants.CHROME_DRIVER_PROPERTY, GeneralContants.CHROME_DRIVER_PATH);
@@ -40,7 +44,6 @@ public class MainTest {
             password = properties.getProperty("password");
         }
 
-        WireMockServerExample.startMockServer();
 
         //login
         Login login = new Login(driver);

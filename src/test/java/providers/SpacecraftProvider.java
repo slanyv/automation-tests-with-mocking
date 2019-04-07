@@ -16,8 +16,7 @@ public class SpacecraftProvider {
                 {
                         new Spacecraft("New spacecraft 1", "long spacecraft", new HashSet<CraftComponent>() {
                             {
-                                add(new CraftComponent("wings", true, null));
-                                add(new CraftComponent("wheels", true, null));
+                                add(new CraftComponent("Wings", true, null));
                             }
                         })
 
@@ -25,7 +24,7 @@ public class SpacecraftProvider {
                 {
                         new Spacecraft("New spacecraft 2", "long spacecraft", new HashSet<CraftComponent>() {
                             {
-                                add(new CraftComponent("wings", true, null));
+                                add(new CraftComponent("Wings", true, null));
                             }
                         })
                 },

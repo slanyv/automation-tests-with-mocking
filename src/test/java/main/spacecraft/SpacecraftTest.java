@@ -15,9 +15,12 @@ public class SpacecraftTest extends MainTest {
     public void addSpacecraft(Spacecraft spacecraft) {
 
         SpacecraftManager spacecraftManager = new SpacecraftManager(this.driver);
-        CraftComponentAPIManager.createComponents(spacecraft.getCraftComponents());
 
-        spacecraft.setName(spacecraft.getName() + UniqueTag.generateString());
+        if (!wireMockServerExample.isServerRunning()){
+            CraftComponentAPIManager.createComponents(spacecraft.getCraftComponents());
+            spacecraft.setName(spacecraft.getName() + UniqueTag.generateString());
+        }
+
         spacecraftManager.open();
         spacecraftManager.fill(spacecraft);
         spacecraftManager.save();
