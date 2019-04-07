@@ -7,9 +7,6 @@ import static com.github.tomakehurst.wiremock.client.WireMock.post;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlMatching;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.options;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
 import org.apache.http.HttpStatus;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
@@ -28,31 +25,22 @@ public class WireMockServerExample {
     private static final String[] scenario_states = new String[]{Scenario.STARTED, "CreateSpacecraft", "DeleteSpacecraft"};
 
     public static void main(String[] args) {
-        WireMockServerExample wireMockServerExample = new WireMockServerExample();
-        wireMockServerExample.startMockServer();
+        WireMockServerExample.startMockServer();
     }
 
-    public void startMockServer() {
+    public static void startMockServer() {
 
         wireMockServer.start();
-        Log.info("\n---STARTING MOCK SERVER---");
-        System.out.println("\n---STARTING MOCK SERVER---");
         /*
         wireMockServer.stubFor(any(urlMatching("/.*"))
                 .willReturn(aResponse().proxiedFrom(GeneralContants.HOME_PAGE_URL)));
         */
         spacecraftTestScenario();
-        // TODO maybe delete this
-        try {
-            InetAddress IP = InetAddress.getLocalHost();
-            System.out.println(IP.getHostAddress());
-            System.out.println(wireMockServer.port());
-        } catch (UnknownHostException ex) {
-            Log.error("Unknown IP of host");
-        }
+        System.out.println("\n---MOCK SERVER STARTED---");
+        System.out.println(WireMockServerExample.wireMockServer.port());
     }
 
-    public boolean isServerRunning() {
+    public static boolean isServerRunning() {
         return wireMockServer.isRunning();
     }
 
@@ -72,12 +60,14 @@ public class WireMockServerExample {
 
     private static void setListOfSpacecraftsResponses() {
 
-        wireMockServer.stubFor(WireMock.options(urlMatching("/pa165/rest/spacecrafts"))
+        String baseUrl = "/pa165/rest/spacecrafts";
+
+        wireMockServer.stubFor(WireMock.options(urlMatching(baseUrl))
                 .willReturn((aResponse()
                         .withHeaders(HttpHeadersConstants.GET_OPTION_HEADERS)
                         .withStatus(HttpStatus.SC_OK))));
 
-        wireMockServer.stubFor(get(urlMatching("/pa165/rest/spacecrafts"))
+        wireMockServer.stubFor(get(urlMatching(baseUrl))
                 .inScenario(scenarioName)
                 .whenScenarioStateIs(scenario_states[0])
                 .willReturn((aResponse()
@@ -85,7 +75,7 @@ public class WireMockServerExample {
                         .withBodyFile("ListOfSpacecrafts.json")
                         .withStatus(HttpStatus.SC_OK))));
 
-        wireMockServer.stubFor(get(urlMatching("/pa165/rest/spacecrafts"))
+        wireMockServer.stubFor(get(urlMatching(baseUrl))
                 .inScenario(scenarioName)
                 .whenScenarioStateIs(scenario_states[1])
                 .willReturn((aResponse()
@@ -93,12 +83,12 @@ public class WireMockServerExample {
                         .withBodyFile("ListOfSpacecraftsAfterAdding.json")
                         .withStatus(HttpStatus.SC_OK))));
 
-        wireMockServer.stubFor(WireMock.options(urlMatching("/pa165/rest/spacecrafts/4"))
+        wireMockServer.stubFor(WireMock.options(urlMatching(baseUrl + "/4"))
                 .willReturn((aResponse()
                         .withHeaders(HttpHeadersConstants.GET_OPTION_HEADERS)
                         .withStatus(HttpStatus.SC_OK))));
 
-        wireMockServer.stubFor(get(urlMatching("/pa165/rest/spacecrafts/4"))
+        wireMockServer.stubFor(get(urlMatching(baseUrl + "/4"))
                 .inScenario(scenarioName)
                 .whenScenarioStateIs(scenario_states[1])
                 .willReturn((aResponse()
@@ -106,7 +96,7 @@ public class WireMockServerExample {
                         .withBodyFile("SpacecraftDetails.json")
                         .withStatus(HttpStatus.SC_OK))));
 
-        wireMockServer.stubFor(get(urlMatching("/pa165/rest/spacecrafts/4"))
+        wireMockServer.stubFor(get(urlMatching(baseUrl + "/4"))
                 .inScenario(scenarioName)
                 .whenScenarioStateIs(scenario_states[2])
                 .willReturn((aResponse()
@@ -117,12 +107,14 @@ public class WireMockServerExample {
 
     private static void setCreateSpacecraftResponses() {
 
-        wireMockServer.stubFor(WireMock.options(urlMatching("/pa165/rest/spacecrafts"))
+        String baseUrl = "/pa165/rest/spacecrafts";
+
+        wireMockServer.stubFor(WireMock.options(urlMatching(baseUrl))
                 .willReturn((aResponse()
                         .withHeaders(HttpHeadersConstants.POST_OPTION_HEADERS)
                         .withStatus(HttpStatus.SC_OK))));
 
-        wireMockServer.stubFor(post(urlMatching("/pa165/rest/spacecrafts"))
+        wireMockServer.stubFor(post(urlMatching(baseUrl))
                 .inScenario(scenarioName)
                 .whenScenarioStateIs(scenario_states[0])
                 .willReturn((aResponse()
@@ -134,12 +126,14 @@ public class WireMockServerExample {
 
     private static void setAvailableComponentResponses() {
 
-        wireMockServer.stubFor(WireMock.options(urlMatching("/pa165/rest/craftComponents/available"))
+        String baseUrl = "/pa165/rest/craftComponents/available";
+
+        wireMockServer.stubFor(WireMock.options(urlMatching(baseUrl))
                 .willReturn((aResponse()
                         .withHeaders(HttpHeadersConstants.GET_OPTION_HEADERS)
                         .withStatus(HttpStatus.SC_OK))));
 
-        wireMockServer.stubFor(get(urlMatching("/pa165/rest/craftComponents/available"))
+        wireMockServer.stubFor(get(urlMatching(baseUrl))
                 .willReturn((aResponse()
                         .withHeaders(HttpHeadersConstants.HEADERS)
                         .withBodyFile("ListOfAvailableCraftComponents.json")
@@ -148,12 +142,14 @@ public class WireMockServerExample {
 
     private static void setDeleteSpacecraftResponses() {
 
-        wireMockServer.stubFor(WireMock.options(urlMatching("/pa165/rest/spacecrafts/4"))
+        String baseUrl = "/pa165/rest/spacecrafts/4";
+
+        wireMockServer.stubFor(WireMock.options(urlMatching(baseUrl))
                 .willReturn((aResponse()
                         .withHeaders(HttpHeadersConstants.DELETE_OPTION_HEADERS)
                         .withStatus(HttpStatus.SC_OK))));
 
-        wireMockServer.stubFor(delete(urlMatching("/pa165/rest/spacecrafts/4"))
+        wireMockServer.stubFor(delete(urlMatching(baseUrl))
                 .inScenario(scenarioName)
                 .whenScenarioStateIs(scenario_states[1])
                 .willReturn((aResponse()

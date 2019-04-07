@@ -1,12 +1,12 @@
 {
-  "id": 5,
-  "type": "fds",
-  "name": "asd",
+  "id": 4,
+  "type":"General Kenobi",
+  "name":"Hello there...",
   "components": [
     {
       "id": 5,
       "readyToUse": true,
-      "name": "TestDelete",
+      "name": "Wheels",
       "readyDate": null
     }
   ]

@@ -14,17 +14,17 @@ public class SpacecraftProvider {
     public Object[][] AddNewSpacecraftProvider(ITestContext ctx) {
         return CommonProvider.returnDesiredRows(ctx, new Object[][]{
                 {
-                        new Spacecraft("New spacecraft 1", "long spacecraft", new HashSet<CraftComponent>() {
+                        new Spacecraft("Hello there...", "General Kenobi", new HashSet<CraftComponent>() {
                             {
-                                add(new CraftComponent("Wings", true, null));
+                                add(new CraftComponent("Wheels", true, null));
                             }
                         })
 
                 },
                 {
-                        new Spacecraft("New spacecraft 2", "long spacecraft", new HashSet<CraftComponent>() {
+                        new Spacecraft("Hello there...", "General Kenobi", new HashSet<CraftComponent>() {
                             {
-                                add(new CraftComponent("Wings", true, null));
+                                add(new CraftComponent("Wheels", true, null));
                             }
                         })
                 },
