@@ -1,0 +1,13 @@
+{
+  "id": 4,
+  "type":"General Kenobi",
+  "name":"Hello there...",
+  "components": [
+    {
+      "id": 5,
+      "readyToUse": true,
+      "name": "Wheels",
+      "readyDate": null
+    }
+  ]
+}

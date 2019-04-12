@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a50902fb-08fd-4d32-bc7c-42517c91b1cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/tools/Configuration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mocker/mock_server_client_example/MockServerClientExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mock_server_responses/ListOfAvailableCraftComponents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mock_server_responses/ListOfSpacecrafts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mock_server_responses/ListOfSpacecraftsAfterAdding.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mock_server_responses/SpacecraftDetails.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/managers/SpacecraftManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/managers/SpacecraftManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/WireMockServerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/WireMockServerExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/main/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/main/spacecraft/SpacecraftTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/main/spacecraft/SpacecraftTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/providers/SpacecraftProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/providers/SpacecraftProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/main/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/main/MainTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,13 +31,37 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/WireMockServerExample.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="393">
+                    <caret line="81" column="67" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="67" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                      <element signature="e#1193#1194#0" expanded="true" />
+                      <element signature="e#1248#1249#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/main/spacecraft/SpacecraftTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="372">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/main/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="185">
+              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,61 +82,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/tools/Configuration.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mocker/mock_server_client_example/MockServerClientExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/core/Login.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="236">
+              <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/WireMockServerExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1212#1213#0" expanded="true" />
-                <element signature="e#1267#1268#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/HttpHeadersConstants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/core/managers/SpacecraftManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#612#613#0" expanded="true" />
+                <element signature="e#667#668#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -142,8 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/tools/Driver.java" />
-        <option value="$PROJECT_DIR$/src/test/java/MainTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/LoginContants.java" />
         <option value="$PROJECT_DIR$/src/main/java/tools/Navigate.java" />
         <option value="$PROJECT_DIR$/src/main/java/tools/Pause.java" />
@@ -193,6 +167,8 @@
         <option value="$PROJECT_DIR$/src/main/java/core/managers/SpacecraftManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/main/MainTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/tools/Configuration.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/mocker/mock_server_client_example/MockServerClientExample.java" />
       </list>
     </option>
   </component>
@@ -215,6 +191,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,7 +232,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="mocker" type="462c0819:PsiDirectoryNode" />
+              <item name="wiremock_server_example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
@@ -262,8 +241,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tools" type="462c0819:PsiDirectoryNode" />
-              <item name="object_mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="mocker" type="462c0819:PsiDirectoryNode" />
+              <item name="wiremock_server_example" type="462c0819:PsiDirectoryNode" />
+              <item name="responses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="automation-tests-with-mocking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mocker" type="462c0819:PsiDirectoryNode" />
+              <item name="wiremock_server_example" type="462c0819:PsiDirectoryNode" />
+              <item name="responses" type="462c0819:PsiDirectoryNode" />
+              <item name="__files" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
@@ -276,22 +267,15 @@
               <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
               <item name="automation-tests-with-mocking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automation-tests-with-mocking" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automation-tests-with-mocking" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mock_server_responses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="automation-tests-with-mocking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
@@ -299,23 +283,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="spacecraft" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
-              <item name="automation-tests-with-mocking" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="providers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,7 +296,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554054428976" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mockserver_responses" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -334,18 +306,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\java\mocker\wiremock_server_example\responses\__files" />
+      <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\java\mocker\wiremock_server_example\responses" />
+      <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\java\mocker\wiremock_server_example\ListOfSpacecraftsAfterAdding" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tools" />
       <recent name="tools.object_mapper" />
       <recent name="providers" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\resources\mockserver_responses" />
       <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\java\mocker\wiremock_server_example\responses\__files" />
-      <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\java\mocker\wiremock_server_example\responses" />
-      <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\java\mocker\wiremock_server_example\ListOfSpacecraftsAfterAdding" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -360,7 +333,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.SpacecraftTest.addSpacecraft">
+  <component name="RunManager" selected="Application.MockServerClientExample">
+    <configuration name="MockServerClientExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="mocker.mock_server_client_example.MockServerClientExample" />
+      <module name="automation-tests-with-mocking" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="mocker.mock_server_client_example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WireMockServerExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="mocker.wiremock_server_example.WireMockServerExample" />
       <module name="automation-tests-with-mocking" />
@@ -388,7 +374,7 @@
       <option name="METHOD_NAME" value="addSpacecraft" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea -DuseMockServer=yes -DuseMockServer0=no" />
+      <option name="VM_PARAMETERS" value="-ea -DuseMockServer0=yes -DuseMockServer=no" />
       <option name="PARAMETERS" value="" />
       <option name="OUTPUT_DIRECTORY" value="" />
       <option name="TEST_SEARCH_SCOPE">
@@ -422,11 +408,13 @@
     <list>
       <item itemvalue="Application.WireMockServerExample" />
       <item itemvalue="TestNG.SpacecraftTest.addSpacecraft" />
+      <item itemvalue="Application.MockServerClientExample" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SpacecraftTest.addSpacecraft" />
+        <item itemvalue="Application.MockServerClientExample" />
         <item itemvalue="Application.WireMockServerExample" />
+        <item itemvalue="TestNG.SpacecraftTest.addSpacecraft" />
       </list>
     </recent_temporary>
   </component>
@@ -462,7 +450,8 @@
       <workItem from="1554643060634" duration="9196000" />
       <workItem from="1554704906896" duration="22000" />
       <workItem from="1554725320286" duration="1465000" />
-      <workItem from="1555063363151" duration="4022000" />
+      <workItem from="1555063363151" duration="7383000" />
+      <workItem from="1555084446830" duration="2958000" />
     </task>
     <task id="LOCAL-00001" summary="wiremock server setup">
       <created>1552141351990</created>
@@ -499,13 +488,17 @@
       <option name="project" value="LOCAL" />
       <updated>1554651716519</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="adding flag to mocking">
+      <created>1555067431748</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1555067431748</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SpacecraftTest_addSpacecraft - 2019.04.07 at 17h 21m 10s.xml">
-      <configuration name="SpacecraftTest.addSpacecraft" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="SpacecraftTest_addSpacecraft - 2019.04.07 at 17h 24m 38s.xml">
       <configuration name="SpacecraftTest.addSpacecraft" configurationId="TestNG" />
     </history-entry>
@@ -533,15 +526,18 @@
     <history-entry file="SpacecraftTest_addSpacecraft - 2019.04.12 at 13h 02m 03s.xml">
       <configuration name="SpacecraftTest.addSpacecraft" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="SpacecraftTest_addSpacecraft - 2019.04.12 at 17h 04m 05s.xml">
+      <configuration name="SpacecraftTest.addSpacecraft" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72448000" />
+    <option name="totallyTimeSpent" value="78767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1641791" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16577825" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -552,7 +548,7 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32827735" />
       <window_info anchor="bottom" id="Run" order="3" weight="0.1879543" />
-      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.39761648" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" sideWeight="0.49946696" visible="true" weight="0.39761648" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -561,7 +557,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50053304" side_tool="true" weight="0.39761648" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -582,7 +578,8 @@
     <MESSAGE value="WIP 2" />
     <MESSAGE value="WIP 3" />
     <MESSAGE value="WIP 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="WIP 4" />
+    <MESSAGE value="adding flag to mocking" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding flag to mocking" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -616,6 +613,12 @@
           <line>28</line>
           <properties />
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tools/Configuration.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -684,39 +687,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/tools/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-            <element signature="e#1520#1521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tools/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="17" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tools/Navigate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding>
-            <element signature="e#135#136#0" expanded="true" />
-            <element signature="e#176#177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tools/Click.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/tools/UniqueTag.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -877,28 +847,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="1" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/github/tomakehurst/wiremock/2.19.0/wiremock-2.19.0.jar!/com/github/tomakehurst/wiremock/stubbing/Scenario.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/github/tomakehurst/wiremock/2.19.0/wiremock-2.19.0.jar!/com/github/tomakehurst/wiremock/client/WireMock.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="601" column="40" selection-start-line="601" selection-start-column="40" selection-end-line="601" selection-end-column="40" />
-          <folding>
-            <element signature="e#22660#22661#0" expanded="true" />
-            <element signature="e#22743#22744#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -942,16 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/HttpHeadersConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/MethodInvocationHelper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -969,21 +911,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/WireMockServerExample.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/Invoker.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-            <element signature="e#1267#1268#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="58">
+          <caret line="341" selection-start-line="341" selection-end-line="341" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/Login.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
+        <state relative-caret-position="340">
           <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -993,16 +937,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.14.3/testng-6.14.3.jar!/org/testng/internal/Invoker.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/HttpHeadersConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="341" selection-start-line="341" selection-end-line="341" />
+        <state relative-caret-position="782">
+          <caret line="50" column="6" selection-start-line="50" selection-start-column="6" selection-end-line="50" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/managers/SpacecraftManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
+        <state relative-caret-position="850">
           <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1010,10 +957,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/github/tomakehurst/wiremock/2.19.0/wiremock-2.19.0.jar!/com/github/tomakehurst/wiremock/client/WireMock.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="412" column="25" selection-start-line="412" selection-start-column="25" selection-end-line="412" selection-end-column="25" />
+          <folding>
+            <element signature="e#15409#15410#0" expanded="true" />
+            <element signature="e#15463#15464#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mock-server/mockserver-client/3.2/mockserver-client-3.2.jar!/org/mockserver/client/server/ForwardChainExpectation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mock_server_responses/ListOfAvailableCraftComponents.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/main/spacecraft/SpacecraftTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="372">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1022,18 +997,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/main/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="185">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tools/Configuration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/WireMockServerExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="49" lean-forward="true" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+        <state relative-caret-position="393">
+          <caret line="81" column="67" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mocker/mock_server_client_example/MockServerClientExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#612#613#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1094,6 +1086,7 @@
             <option name="proportions">
               <list>
                 <option value="0.25632185" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
