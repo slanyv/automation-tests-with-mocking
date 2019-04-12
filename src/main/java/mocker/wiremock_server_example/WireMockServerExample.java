@@ -13,8 +13,6 @@ import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.stubbing.Scenario;
 
-import tools.Log;
-
 public class WireMockServerExample {
 
 
@@ -30,6 +28,7 @@ public class WireMockServerExample {
 
     public static void startMockServer() {
 
+        //wireMockServer.stubFor(any(anyUrl()).willReturn(ResponseDefinitionBuilder.responseDefinition().proxiedFrom("http://localhost:8080/pa165/rest/")));
         wireMockServer.start();
         /*
         wireMockServer.stubFor(any(urlMatching("/.*"))
@@ -46,7 +45,7 @@ public class WireMockServerExample {
 
     public static void stopMockServer() {
 
-        Log.info("---STOPPING MOCK SERVER---");
+        System.out.println("---STOPPING MOCK SERVER---");
         wireMockServer.stop();
     }
 

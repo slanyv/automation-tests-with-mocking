@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 import core.Login;
 import core.constants.GeneralContants;
 import mocker.wiremock_server_example.WireMockServerExample;
+import tools.Configuration;
 import tools.object_mapper.ObjectMapperFactory;
 
 
@@ -22,7 +23,12 @@ public class MainTest {
     @BeforeTest
     public void setUpConfiguration() throws IOException {
 
-        WireMockServerExample.startMockServer();
+        Configuration configuration = new Configuration();
+        configuration.initialize();
+
+        if (configuration.isUseMockServer()) {
+            WireMockServerExample.startMockServer();
+        }
 
         ObjectMapperFactory objectMapperFactory = new ObjectMapperFactory();
         objectMapperFactory.create();
@@ -48,12 +54,14 @@ public class MainTest {
         login.login(username, password);
     }
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     public void afterTest() {
-        WireMockServerExample.stopMockServer();
+        if (WireMockServerExample.isServerRunning()) {
+            WireMockServerExample.stopMockServer();
+        }
     }
 
-    @AfterSuite
+    @AfterSuite(alwaysRun = true)
     public void afterSuite() {
         driver.close();
         driver.quit();

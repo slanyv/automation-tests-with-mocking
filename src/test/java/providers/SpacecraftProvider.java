@@ -21,13 +21,6 @@ public class SpacecraftProvider {
                         })
 
                 },
-                {
-                        new Spacecraft("Hello there...", "General Kenobi", new HashSet<CraftComponent>() {
-                            {
-                                add(new CraftComponent("Wheels", true, null));
-                            }
-                        })
-                },
         });
     }
 }

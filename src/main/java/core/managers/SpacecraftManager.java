@@ -26,7 +26,9 @@ public class SpacecraftManager {
 
         Navigate.to(driver, GeneralContants.HOME_PAGE_URL);
         driver.findElement(HomePageScreen.spacecrafts).click();
+        Pause.untilWithXPath(driver, SpacecraftsScreen.newSpacecraft);
         driver.findElement(SpacecraftsScreen.newSpacecraft).click();
+        Pause.untilWithXPath(driver, SpacecraftsScreen.spacecraftName);
     }
 
     public void fill(Spacecraft spacecraft) {
@@ -41,6 +43,7 @@ public class SpacecraftManager {
     public void save() {
 
         driver.findElement(SpacecraftsScreen.saveSpacecraft).click();
+        Pause.untilWithXPath(driver, SpacecraftsScreen.newSpacecraft);
     }
 
     public void check(Spacecraft spacecraft) {
