@@ -92,7 +92,7 @@ public class MockServerClientExample {
     }
 
     public static boolean isServerRunning() {
-        return true; //TODO
+        return false; //TODO
     }
 
     public static void stopMockServer() {

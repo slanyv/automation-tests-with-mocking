@@ -1,6 +1,7 @@
 package mocker.wiremock_server_example;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
+import static com.github.tomakehurst.wiremock.client.WireMock.any;
 import static com.github.tomakehurst.wiremock.client.WireMock.delete;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
@@ -12,6 +13,8 @@ import org.apache.http.HttpStatus;
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.stubbing.Scenario;
+
+import core.constants.GeneralContants;
 
 public class WireMockServerExample {
 
@@ -29,11 +32,10 @@ public class WireMockServerExample {
     public static void startMockServer() {
 
         //wireMockServer.stubFor(any(anyUrl()).willReturn(ResponseDefinitionBuilder.responseDefinition().proxiedFrom("http://localhost:8080/pa165/rest/")));
-        wireMockServer.start();
-        /*
         wireMockServer.stubFor(any(urlMatching("/.*"))
                 .willReturn(aResponse().proxiedFrom(GeneralContants.HOME_PAGE_URL)));
-        */
+        wireMockServer.start();
+
         spacecraftTestScenario();
         System.out.println("\n---MOCK SERVER STARTED---");
         System.out.println(WireMockServerExample.wireMockServer.port());
