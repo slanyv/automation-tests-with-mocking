@@ -1,4 +1,4 @@
-package mocker.wiremock_server_example;
+package core.constants;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,12 +9,12 @@ import com.github.tomakehurst.wiremock.http.HttpHeaders;
 public class HttpHeadersConstants {
 
     private static final HttpHeader ACCESS_ORIGIN_HEADER = new HttpHeader("Access-Control-Allow-Origin", "*");
+    private static final HttpHeader CONTENT_HEADER = new HttpHeader("Content-Type", "application/json; charset=UTF-8");
     private static final HttpHeader ACCESS_CONTROL_ALLOW_METHODS_GET_HEADER = new HttpHeader("Access-Control-Allow-Methods", "GET");
     private static final HttpHeader ACCESS_CONTROL_ALLOW_METHODS_POST_HEADER = new HttpHeader("Access-Control-Allow-Methods", "POST");
     private static final HttpHeader ACCESS_CONTROL_ALLOW_METHODS_DELETE_HEADER = new HttpHeader("Access-Control-Allow-Methods", "DELETE");
     private static final HttpHeader ACCESS_REQUEST_GET_HEADER = new HttpHeader("Access-Control-Allow-Headers", "authorization,x-requested-with");
     private static final HttpHeader ACCESS_REQUEST_POST_HEADER = new HttpHeader("Access-Control-Allow-Headers", "authorization,content-type,x-requested-with");
-    private static final HttpHeader CONTENT_HEADER = new HttpHeader("Content-Type", "application/json; charset=UTF-8");
 
 
     private static final Set<HttpHeader> DEFAULT_HEADERS = new HashSet<HttpHeader>() {

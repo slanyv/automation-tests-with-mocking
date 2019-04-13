@@ -4,23 +4,19 @@ import static org.mockserver.integration.ClientAndServer.startClientAndServer;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.junit.Test;
-import org.mockserver.client.MockServerClient;
+import org.apache.http.HttpStatus;
 import org.mockserver.integration.ClientAndServer;
 import org.mockserver.matchers.Times;
-import org.mockserver.model.Header;
 
+import core.constants.HeadersConstants;
+import core.enums.EMethods;
 import tools.FileReader;
 
 public class MockServerClientExample {
 
     private static final int SERVER_PORT = 8081;
     private static final String RELATIVE_PATH = "\\src\\main\\resources\\mock_server_responses\\";
-    private static MockServerClient mockServerClient;
-    private ClientAndServer mockServer;
+    private static ClientAndServer mockServer;
 
     public static void main(String[] args) {
         MockServerClientExample.startMockServer();
@@ -28,84 +24,26 @@ public class MockServerClientExample {
 
     public static void startMockServer() {
 
-        mockServerClient = new MockServerClient("localhost", SERVER_PORT).reset();
-
-
-        MockServerClientExample asd = new MockServerClientExample();
-        asd.setup();
-        //spacecraftTestScenario();
-        System.out.println("asd");
-        mockServerClient.stop();
-    }
-
-    @Test
-    public void setup() {
-
-        List<Header> defaultHeader = new ArrayList<>();
-        defaultHeader.add(Header.header("Content-Type", "application/json; charset=UTF-8"));
-        defaultHeader.add(Header.header("Authorization", "Basic YWRtaW5AYWRtaW4uY29tOnBhc3N3b3Jk"));
-        defaultHeader.add(Header.header("Access-Control-Allow-Origin", "*"));
-        defaultHeader.add(Header.header("Pragma", "no-cache"));
-        defaultHeader.add(Header.header("Transfer-Encoding", "chunked"));
-
-        List<Header> optionsGetHeaders = new ArrayList<>(defaultHeader);
-        optionsGetHeaders.add(Header.header("Access-Control-Allow-Methods", "GET"));
-        optionsGetHeaders.add(Header.header("Access-Control-Allow-Headers", "authorization,x-requested-with"));
-        optionsGetHeaders.add(Header.header("Cache-Control", "no-cache, no-store, max-age=0, must-revalidate"));
-
-
-        List<Header> headers = new ArrayList<>(defaultHeader);
-        headers.add(Header.header("Access-Control-Allow-Headers", "accept, content-type"));
-        headers.add(Header.header("Access-Control-Allow-Headers", "authorization,x-requested-with"));
-        headers.add(Header.header("Access-Control-Allow-Methods", "GET"));
-        headers.add(Header.header("Cache-Control", "no-cache, no-store"));
-        headers.add(Header.header("Connection", "keep-alive"));
-
-        String baseUrl = "/pa165/rest/spacecrafts";
-        mockServer = startClientAndServer(8081);
-        mockServer
-                .when(
-                        request()
-                                .withMethod("OPTIONS")
-                                .withHeaders(optionsGetHeaders)
-                                .withPath(baseUrl)
-                )
-                .respond(
-                        response()
-                                .withStatusCode(200)
-                );
-
-        mockServer
-                .when(
-                        request()
-                                .withMethod("GET")
-                                .withPath(baseUrl)
-                )
-                .respond(
-                        response()
-                                .withHeaders(headers)
-                                .withStatusCode(200)
-                                .withBody("ahoj")
-                );
-
-        System.out.println("asd");
+        mockServer = startClientAndServer(SERVER_PORT);
+        mockServer.reset();
+        spacecraftTestScenario();
+        System.out.println("\n--- MOCK SERVER STARTED ON PORT: " + mockServer.getLocalPort() + " ---");
     }
 
     public static boolean isServerRunning() {
-        return false; //TODO
+        return true; //TODO
     }
 
     public static void stopMockServer() {
 
-        System.out.println("---STOPPING MOCK SERVER---");
-        mockServerClient.stop();
+        System.out.println("--- STOPPING MOCK SERVER ---");
+        mockServer.stop();
     }
 
     private static void spacecraftTestScenario() {
 
         setListOfSpacecraftsResponses();
         setAvailableComponentResponses();
-        setCreateSpacecraftResponses();
         setDeleteSpacecraftResponses();
     }
 
@@ -113,45 +51,127 @@ public class MockServerClientExample {
     private static void setListOfSpacecraftsResponses() {
 
         String baseUrl = "/pa165/rest/spacecrafts";
-        mockServerClient.when(
-                request()
-                        .withMethod("GET")
-                        .withPath(baseUrl),
-                Times.exactly(1))
+
+        //GET spacecrafts
+        mockServer
+                .when(request()
+                        .withPath(baseUrl)
+                        .withMethod(EMethods.OPTIONS.name()),
+                        Times.exactly(1)
+                )
                 .respond(response()
-                        .withStatusCode(200)
-                        .withBody(""));
-        //.withBody(FileReader.readFileAsString(RELATIVE_PATH + "ListOfSpacecrafts.json")));
+                        .withHeaders(HeadersConstants.optionsGetHeaders(EMethods.GET))
+                        .withStatusCode(HttpStatus.SC_OK)
+                );
 
-        mockServerClient.when(
-                request()
-                        .withMethod("GET")
-                        .withPath(baseUrl),
-                Times.exactly(1))
+        mockServer
+                .when(request()
+                                .withMethod(EMethods.GET.name())
+                                .withPath(baseUrl),
+                        Times.exactly(1)
+                )
                 .respond(response()
-                        .withStatusCode(200)
-                        .withBody(FileReader.readFileAsString(RELATIVE_PATH + "ListOfSpacecraftsAfterAdding.json")));
+                        .withHeaders(HeadersConstants.defaultHeader())
+                        .withStatusCode(HttpStatus.SC_OK)
+                        .withBody(FileReader.readFileAsString(RELATIVE_PATH + "ListOfSpacecrafts.json"))
+                );
 
-        mockServerClient.when(
-                request()
-                        .withMethod("GET")
-                        .withPath(baseUrl),
-                Times.exactly(1))
+        //POST new spacecraft
+        mockServer
+                .when(request()
+                                .withPath(baseUrl)
+                                .withMethod(EMethods.OPTIONS.name()),
+                        Times.exactly(1)
+                )
                 .respond(response()
-                        .withStatusCode(200)
-                        .withBody(FileReader.readFileAsString(RELATIVE_PATH + "ListOfSpacecrafts.json")));
+                        .withHeaders(HeadersConstants.optionsPostHeaders(EMethods.POST))
+                        .withStatusCode(HttpStatus.SC_OK)
+                );
 
-    }
+        mockServer
+                .when(request()
+                                .withMethod(EMethods.POST.name())
+                                .withPath(baseUrl),
+                        Times.exactly(1)
+                )
+                .respond(response()
+                        .withHeaders(HeadersConstants.defaultHeader())
+                        .withStatusCode(HttpStatus.SC_OK)
+                        .withBody(FileReader.readFileAsString(RELATIVE_PATH + "SpacecraftDetails.json"))
+                );
 
-    private static void setCreateSpacecraftResponses() {
+        //GET all spacecrafts after creation
+        mockServer
+                .when(request()
+                                .withPath(baseUrl)
+                                .withMethod(EMethods.OPTIONS.name()),
+                        Times.exactly(1)
+                )
+                .respond(response()
+                        .withHeaders(HeadersConstants.optionsGetHeaders(EMethods.GET))
+                        .withStatusCode(HttpStatus.SC_OK)
+                );
 
-        String baseUrl = "/pa165/rest/spacecrafts";
+        mockServer
+                .when(request()
+                                .withMethod(EMethods.GET.name())
+                                .withPath(baseUrl),
+                        Times.exactly(1)
+                )
+                .respond(response()
+                        .withHeaders(HeadersConstants.defaultHeader())
+                        .withStatusCode(HttpStatus.SC_OK)
+                        .withBody(FileReader.readFileAsString(RELATIVE_PATH + "ListOfSpacecraftsAfterAdding.json"))
+                );
 
+        mockServer
+                .when(request()
+                        .withPath(baseUrl + "/4")
+                        .withMethod(EMethods.OPTIONS.name()),
+                        Times.exactly(1)
+                )
+                .respond(response()
+                        .withHeaders(HeadersConstants.optionsGetHeaders(EMethods.GET))
+                        .withStatusCode(HttpStatus.SC_OK)
+                );
+
+        mockServer
+                .when(request()
+                                .withMethod(EMethods.GET.name())
+                                .withPath(baseUrl + "/4"),
+                        Times.exactly(1)
+                )
+                .respond(response()
+                        .withHeaders(HeadersConstants.defaultHeader())
+                        .withStatusCode(HttpStatus.SC_OK)
+                        .withBody(FileReader.readFileAsString(RELATIVE_PATH + "SpacecraftDetails.json"))
+                );
     }
 
     private static void setAvailableComponentResponses() {
 
         String baseUrl = "/pa165/rest/craftComponents/available";
+
+        mockServer
+                .when(request()
+                        .withPath(baseUrl)
+                        .withMethod(EMethods.OPTIONS.name())
+                )
+                .respond(response()
+                        .withHeaders(HeadersConstants.optionsGetHeaders(EMethods.GET))
+                        .withStatusCode(HttpStatus.SC_OK)
+                );
+
+        mockServer
+                .when(request()
+                                .withMethod(EMethods.GET.name())
+                                .withPath(baseUrl)
+                )
+                .respond(response()
+                        .withHeaders(HeadersConstants.defaultHeader())
+                        .withStatusCode(HttpStatus.SC_OK)
+                        .withBody(FileReader.readFileAsString(RELATIVE_PATH + "ListOfAvailableCraftComponents.json"))
+                );
     }
 
     private static void setDeleteSpacecraftResponses() {
