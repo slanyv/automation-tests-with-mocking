@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeTest;
 
 import core.Login;
 import core.constants.GeneralContants;
+import mocker.mock_server_client_example.MockServerClientExample;
 import mocker.wiremock_server_example.WireMockServerExample;
 import tools.Configuration;
 import tools.object_mapper.ObjectMapperFactory;
@@ -26,8 +27,12 @@ public class MainTest {
         Configuration configuration = new Configuration();
         configuration.initialize();
 
-        if (configuration.isUseMockServer()) {
+        if (configuration.isUseWireMockServer()) {
             WireMockServerExample.startMockServer();
+        }
+
+        if (configuration.isUseMockServerClient()) {
+            MockServerClientExample.startMockServer();
         }
 
         ObjectMapperFactory objectMapperFactory = new ObjectMapperFactory();
@@ -54,10 +59,18 @@ public class MainTest {
         login.login(username, password);
     }
 
+    protected boolean isUsingAnyMockServer() {
+        return (WireMockServerExample.isServerRunning() || MockServerClientExample.isServerRunning());
+    }
+
     @AfterTest(alwaysRun = true)
     public void afterTest() {
+
         if (WireMockServerExample.isServerRunning()) {
             WireMockServerExample.stopMockServer();
+        }
+        if (MockServerClientExample.isServerRunning()) {
+            MockServerClientExample.stopMockServer();
         }
     }
 
