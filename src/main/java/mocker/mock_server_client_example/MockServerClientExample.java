@@ -22,6 +22,11 @@ public class MockServerClientExample {
         MockServerClientExample.startMockServer();
     }
 
+    public static void initialize() {
+        mockServer = new ClientAndServer();
+        mockServer.stop();
+    }
+
     public static void startMockServer() {
 
         mockServer = startClientAndServer(SERVER_PORT);
@@ -31,7 +36,7 @@ public class MockServerClientExample {
     }
 
     public static boolean isServerRunning() {
-        return true; //TODO
+        return mockServer.isRunning();
     }
 
     public static void stopMockServer() {

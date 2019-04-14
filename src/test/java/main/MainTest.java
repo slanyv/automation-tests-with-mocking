@@ -20,17 +20,19 @@ import tools.object_mapper.ObjectMapperFactory;
 public class MainTest {
 
     protected ChromeDriver driver;
+    private Configuration configuration;
 
     @BeforeTest
     public void setUpConfiguration() throws IOException {
 
-        Configuration configuration = new Configuration();
+        configuration = new Configuration();
         configuration.initialize();
 
         if (configuration.isUseWireMockServer()) {
             WireMockServerExample.startMockServer();
         }
 
+        MockServerClientExample.initialize();
         if (configuration.isUseMockServerClient()) {
             MockServerClientExample.startMockServer();
         }
@@ -60,7 +62,7 @@ public class MainTest {
     }
 
     protected boolean isUsingAnyMockServer() {
-        return (WireMockServerExample.isServerRunning() || MockServerClientExample.isServerRunning());
+        return (WireMockServerExample.isServerRunning() || MockServerClientExample.isServerRunning() || configuration.isUseExternalMockServer());
     }
 
     @AfterTest(alwaysRun = true)

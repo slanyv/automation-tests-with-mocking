@@ -48,12 +48,11 @@ public class SpacecraftManager {
 
     public void check(Spacecraft spacecraft) {
 
-        //TODO
         if (driver.findElement(SpacecraftsScreen.closeAlert).isDisplayed()) {
             driver.findElement(SpacecraftsScreen.closeAlert).click();
         }
         driver.findElement(SpacecraftsScreen.spacecraftCraftRow(spacecraft.getName())).click();
-        Pause.untilWithElement(driver, 3 ,driver.findElement(SpacecraftsScreen.spacecraftCraftComponent(spacecraft.getCraftComponents().iterator().next().getName())));
+        //Pause.untilWithElement(driver, driver.findElement(SpacecraftsScreen.spacecraftCraftComponent(spacecraft.getCraftComponents().iterator().next().getName())));
         for (CraftComponent craftComponent : spacecraft.getCraftComponents()) {
             assertThat("Spacecraft component name mismatch after creation. spacecraft: " + spacecraft,
                     driver.findElement(SpacecraftsScreen.spacecraftCraftComponent(craftComponent.getName())).getText(), is(craftComponent.getName()));

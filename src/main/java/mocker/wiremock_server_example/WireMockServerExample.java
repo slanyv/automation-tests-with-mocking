@@ -19,7 +19,6 @@ import core.constants.HttpHeadersConstants;
 
 public class WireMockServerExample {
 
-
     private static final int SERVER_PORT = 8081;
     private static WireMockServer wireMockServer = new WireMockServer(options().port(SERVER_PORT).usingFilesUnderDirectory("./src/main/java/mocker/wiremock_server_example/responses/"));
 

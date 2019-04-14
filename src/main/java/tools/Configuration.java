@@ -6,6 +6,7 @@ public class Configuration {
 
     private @Getter boolean useWireMockServer;
     private @Getter boolean useMockServerClient;
+    private @Getter boolean useExternalMockServer;
 
     /**
      * Call this method on the beginning of test - in setUp()
@@ -29,6 +30,16 @@ public class Configuration {
             this.useMockServerClient = true;
         } else {
             throw new IllegalArgumentException("Not unsupported -DuseMockServerClient parameter: '" + useMockServerClient + "'. " +
+                    "Use one of supported values: 'yes' or 'no'");
+        }
+
+        String useExternalMockServer = System.getProperty("useExternalMockServer");
+        if (useExternalMockServer == null || useExternalMockServer.equals("no")) {
+            this.useExternalMockServer = false;
+        } else if (useExternalMockServer.equals("yes")) {
+            this.useExternalMockServer = true;
+        } else {
+            throw new IllegalArgumentException("Not unsupported -DuseExternalMockServer parameter: '" + useExternalMockServer + "'. " +
                     "Use one of supported values: 'yes' or 'no'");
         }
 

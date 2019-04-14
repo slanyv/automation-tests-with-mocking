@@ -12,7 +12,7 @@ import tools.UniqueTag;
 public class SpacecraftTest extends MainTest {
 
     @Test(dataProvider = "AddNewSpacecraftProvider", dataProviderClass = SpacecraftProvider.class, description = "Create new spacecraft.")
-    public void addSpacecraft(Spacecraft spacecraft) {
+    public void createSpacecraft(Spacecraft spacecraft) {
 
         SpacecraftManager spacecraftManager = new SpacecraftManager(this.driver);
 
@@ -25,5 +25,18 @@ public class SpacecraftTest extends MainTest {
         spacecraftManager.fill(spacecraft);
         spacecraftManager.save();
         spacecraftManager.check(spacecraft);
+    }
+
+    @Test(dataProvider = "AddNewSpacecraftProvider", dataProviderClass = SpacecraftProvider.class, description = "Create new spacecraft.")
+    public void createSpacecraftUI(Spacecraft spacecraft) {
+
+        SpacecraftManager spacecraftManager = new SpacecraftManager(this.driver);
+
+        if (!isUsingAnyMockServer()){
+            CraftComponentAPIManager.createComponents(spacecraft.getCraftComponents());
+        }
+
+        spacecraftManager.open();
+        spacecraftManager.fill(spacecraft);
     }
 }
