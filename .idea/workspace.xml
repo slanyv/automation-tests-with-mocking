@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a50902fb-08fd-4d32-bc7c-42517c91b1cb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mockoon_data/Mockoon-Test-Data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/managers/SpacecraftManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/managers/SpacecraftManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/core/screens/SpacecraftsScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/core/screens/SpacecraftsScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mocker/mock_server_client_example/MockServerClientExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mocker/mock_server_client_example/MockServerClientExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/WireMockServerExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mocker/wiremock_server_example/WireMockServerExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tools/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mock_server_responses/ListOfAvailableCraftComponents.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mock_server_responses/__files/ListOfAvailableCraftComponents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mock_server_responses/ListOfSpacecrafts.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mock_server_responses/__files/ListOfSpacecrafts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mock_server_responses/ListOfSpacecraftsAfterAdding.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mock_server_responses/__files/ListOfSpacecraftsAfterAdding.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mock_server_responses/SpacecraftDetails.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mock_server_responses/__files/SpacecraftDetails.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/mocker/mock_server_client_example/MockServerClientExample.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="493">
+              <caret line="31" column="55" lean-forward="true" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -327,6 +317,14 @@
               <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
               <item name="automation-tests-with-mocking" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mockoon-data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="automation-tests-with-mocking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="automation-tests-with-mocking" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -389,6 +387,7 @@
       <recent name="providers" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\resources\mockoon_data" />
       <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\resources\mock_server_responses" />
       <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\resources\mockserver_responses" />
       <recent name="C:\Users\viktor.slany\IdeaProjects\automation-tests-with-mocking\src\main\java\mocker\wiremock_server_example\responses\__files" />
@@ -553,7 +552,7 @@
       <workItem from="1558190572426" duration="4806000" />
       <workItem from="1558367327159" duration="491000" />
       <workItem from="1558420169345" duration="38000" />
-      <workItem from="1558512904939" duration="4495000" />
+      <workItem from="1558512904939" duration="5418000" />
     </task>
     <task id="LOCAL-00001" summary="wiremock server setup">
       <created>1552141351990</created>
@@ -639,7 +638,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555263154825</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="cleaning and refactoring code">
+      <created>1558525272464</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1558525272464</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -675,13 +681,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123319000" />
+    <option name="totallyTimeSpent" value="124242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21002132" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21002132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -691,7 +696,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.32827735" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32827735" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3217768" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.3217768" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49946696" weight="0.2751896" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -760,7 +765,8 @@
     <MESSAGE value="reduce unused headers from wiremock server" />
     <MESSAGE value="working mock server client" />
     <MESSAGE value="external mock server impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="external mock server impl" />
+    <MESSAGE value="cleaning and refactoring code" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleaning and refactoring code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -835,7 +841,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/main/course/CourseTest.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/providers/CourseProvider.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/core/entities/Course.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/core/screens/CoursesScreen.java" />
@@ -1189,10 +1194,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mockoon-data/MockoonTestData.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mocker/mock_server_client_example/MockServerClientExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="493">
+          <caret line="31" column="55" lean-forward="true" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
