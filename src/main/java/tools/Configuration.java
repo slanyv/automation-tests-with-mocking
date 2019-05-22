@@ -43,9 +43,13 @@ public class Configuration {
                     "Use one of supported values: 'yes' or 'no'");
         }
 
-        if (this.useWireMockServer && this.useMockServerClient) {
-            throw new IllegalArgumentException("Not unsupported combination of values for -DuseMockServerClient and -DuseWireMockServer. " +
-                    "Only one mocking server can be used at the same time.");
+        if (atLeastTwo(this.useWireMockServer, this.useMockServerClient, this.useExternalMockServer)) {
+            throw new IllegalArgumentException("Not unsupported combination of values for -DuseMockServerClient, -DuseWireMockServer " +
+                    "and -DuseExternalMockServer. Only one mocking server can be used at the same time.");
         }
+    }
+
+    private static boolean atLeastTwo(boolean first, boolean second, boolean third) {
+        return first ? (second || third) : (second && third);
     }
 }

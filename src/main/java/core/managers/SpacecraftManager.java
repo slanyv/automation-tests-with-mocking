@@ -15,7 +15,6 @@ import tools.Pause;
 
 public class SpacecraftManager {
 
-
     private ChromeDriver driver;
 
     public SpacecraftManager(ChromeDriver driver) {
@@ -52,13 +51,10 @@ public class SpacecraftManager {
             driver.findElement(SpacecraftsScreen.closeAlert).click();
         }
         driver.findElement(SpacecraftsScreen.spacecraftCraftRow(spacecraft.getName())).click();
-        //Pause.untilWithElement(driver, driver.findElement(SpacecraftsScreen.spacecraftCraftComponent(spacecraft.getCraftComponents().iterator().next().getName())));
+        Pause.untilWithXPath(driver, SpacecraftsScreen.spacecraftComponentsWindow);
         for (CraftComponent craftComponent : spacecraft.getCraftComponents()) {
             assertThat("Spacecraft component name mismatch after creation. spacecraft: " + spacecraft,
                     driver.findElement(SpacecraftsScreen.spacecraftCraftComponent(craftComponent.getName())).getText(), is(craftComponent.getName()));
-            /*
-            assertThat("Spacecraft component ready to use mismatch after creation. spacecraft: " + spacecraft,
-                    driver.findElement(SpacecraftsScreen.spacecraftCraftComponent(craftComponent.getName())).getText(), is(craftComponent.getName()));*/
         }
     }
 }

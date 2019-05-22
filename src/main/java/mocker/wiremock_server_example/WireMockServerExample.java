@@ -20,7 +20,7 @@ import core.constants.HttpHeadersConstants;
 public class WireMockServerExample {
 
     private static final int SERVER_PORT = 8081;
-    private static WireMockServer wireMockServer = new WireMockServer(options().port(SERVER_PORT).usingFilesUnderDirectory("./src/main/java/mocker/wiremock_server_example/responses/"));
+    private static WireMockServer wireMockServer = new WireMockServer(options().port(SERVER_PORT).usingFilesUnderDirectory("./src/main/resources/mock_server_responses/"));
 
     private static final String scenarioName = "CreateSpacecraft";
     private static final String[] scenario_states = new String[]{Scenario.STARTED, "CreateSpacecraft", "DeleteSpacecraft"};

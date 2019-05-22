@@ -15,7 +15,7 @@ import tools.FileReader;
 public class MockServerClientExample {
 
     private static final int SERVER_PORT = 8081;
-    private static final String RELATIVE_PATH = "\\src\\main\\resources\\mock_server_responses\\";
+    private static final String RELATIVE_PATH = "\\src\\main\\resources\\mock_server_responses\\__files\\";
     private static ClientAndServer mockServer;
 
     public static void main(String[] args) {
@@ -32,7 +32,7 @@ public class MockServerClientExample {
         mockServer = startClientAndServer(SERVER_PORT);
         mockServer.reset();
         spacecraftTestScenario();
-        System.out.println("\n--- MOCK SERVER STARTED ON PORT: " + mockServer.getLocalPort() + " ---");
+        System.out.println("--- MOCK SERVER STARTED ON PORT: " + mockServer.getLocalPort() + " ---");
     }
 
     public static boolean isServerRunning() {
@@ -49,7 +49,6 @@ public class MockServerClientExample {
 
         setListOfSpacecraftsResponses();
         setAvailableComponentResponses();
-        setDeleteSpacecraftResponses();
     }
 
 
@@ -177,11 +176,5 @@ public class MockServerClientExample {
                         .withStatusCode(HttpStatus.SC_OK)
                         .withBody(FileReader.readFileAsString(RELATIVE_PATH + "ListOfAvailableCraftComponents.json"))
                 );
-    }
-
-    private static void setDeleteSpacecraftResponses() {
-
-        String baseUrl = "/pa165/rest/spacecrafts/4";
-
     }
 }
