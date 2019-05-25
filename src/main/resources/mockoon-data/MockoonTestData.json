@@ -1,1 +1,188 @@
-{"id":"mockoon_export","checksum":"9bf13b81d0321eae74e0093ef3fe8c0c","subject":"full","data":[{"uuid":"05c2aa81-4410-11e9-9567-939b426a252f","name":"createSpacecraftUITest","endpointPrefix":"pa165/rest","latency":0,"port":8081,"routes":[{"uuid":"2470f470-57aa-11e9-8991-b9a4a4d61b6e","documentation":"","method":"get","endpoint":"spacecrafts","body":"[\r\n  {\r\n    \"id\":1,\r\n    \"type\":\"Manned spacecraft\",\r\n    \"name\":\"Apollo 11\",\r\n    \"components\":[\r\n      {\r\n        \"id\":1,\r\n        \"readyToUse\":false,\r\n        \"name\":\"Wing\",\r\n        \"readyDate\":\"2019-04-10T15:30:00.364+02:00[Europe/Prague]\"\r\n      },\r\n      {\r\n        \"id\":2,\r\n        \"readyToUse\":true,\r\n        \"name\":\"Fuel tank\",\r\n        \"readyDate\":null\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"id\":2,\r\n    \"type\":\"Supply rocket\",\r\n    \"name\":\"Falcon 9\",\r\n    \"components\":[\r\n      {\r\n        \"id\":3,\r\n        \"readyToUse\":false,\r\n        \"name\":\"Engine\",\r\n        \"readyDate\":\"2019-05-15T15:30:00.841+02:00[Europe/Prague]\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"id\":3,\r\n    \"type\":\"Smuggler ship\",\r\n    \"name\":\"Millenium falcon\",\r\n    \"components\":[\r\n      {\r\n        \"id\":4,\r\n        \"readyToUse\":true,\r\n        \"name\":\"Cockpit\",\r\n        \"readyDate\":null\r\n      }\r\n    ]\r\n  }\r\n]","latency":0,"statusCode":"200","headers":[{"uuid":"2470f471-57aa-11e9-8991-b9a4a4d61b6e","key":"Content-Type","value":"application/json; charset=UTF-8"},{"uuid":"2470f472-57aa-11e9-8991-b9a4a4d61b6e","key":"Authorization","value":"Basic YWRtaW5AYWRtaW4uY29tOnBhc3N3b3Jk"},{"uuid":"2470f473-57aa-11e9-8991-b9a4a4d61b6e","key":"Access-Control-Allow-Methods","value":"GET, POST, PUT, DELETE, OPTIONS"},{"uuid":"2470f474-57aa-11e9-8991-b9a4a4d61b6e","key":"Access-Control-Allow-Origin","value":"*"},{"uuid":"2470f475-57aa-11e9-8991-b9a4a4d61b6e","key":"Cache-Control","value":"no-cache, no-store, max-age=0, must-revalidate"},{"uuid":"2470f476-57aa-11e9-8991-b9a4a4d61b6e","key":"Pragma","value":"no-cache"},{"uuid":"2470f477-57aa-11e9-8991-b9a4a4d61b6e","key":"Transfer-Encoding","value":"chunked"}],"file":null,"duplicates":[]},{"uuid":"fcbec100-57a9-11e9-8991-b9a4a4d61b6e","documentation":"","method":"post","endpoint":"spacecrafts","body":"{\r\n  \"id\": 4,\r\n  \"type\":\"General Kenobi\",\r\n  \"name\":\"Hello there...\",\r\n  \"components\": [\r\n    {\r\n      \"id\": 5,\r\n      \"readyToUse\": true,\r\n      \"name\": \"Wheels\",\r\n      \"readyDate\": null\r\n    }\r\n  ]\r\n}","latency":0,"statusCode":"200","headers":[{"uuid":"fcbec101-57a9-11e9-8991-b9a4a4d61b6e","key":"Content-Type","value":"application/json; charset=UTF-8"},{"uuid":"fcbec102-57a9-11e9-8991-b9a4a4d61b6e","key":"Authorization","value":"Basic YWRtaW5AYWRtaW4uY29tOnBhc3N3b3Jk"},{"uuid":"fcbec103-57a9-11e9-8991-b9a4a4d61b6e","key":"Access-Control-Allow-Methods","value":"GET, POST, PUT, DELETE, OPTIONS"},{"uuid":"fcbec104-57a9-11e9-8991-b9a4a4d61b6e","key":"Access-Control-Allow-Origin","value":"*"},{"uuid":"fcbec105-57a9-11e9-8991-b9a4a4d61b6e","key":"Cache-Control","value":"no-cache, no-store, max-age=0, must-revalidate"},{"uuid":"fcbec106-57a9-11e9-8991-b9a4a4d61b6e","key":"Pragma","value":"no-cache"},{"uuid":"fcbec107-57a9-11e9-8991-b9a4a4d61b6e","key":"Transfer-Encoding","value":"chunked"}],"file":null,"duplicates":[]},{"uuid":"97c5d330-57a7-11e9-8991-b9a4a4d61b6e","documentation":"","method":"get","endpoint":"craftComponents/available","body":"[\r\n  {\r\n    \"id\":5,\r\n    \"readyToUse\":true,\r\n    \"name\":\"Wings\",\r\n    \"readyDate\":null\r\n  },\r\n  {\r\n    \"id\":6,\r\n    \"readyToUse\":true,\r\n    \"name\":\"Wheels\",\r\n    \"readyDate\":null\r\n  }\r\n]","latency":0,"statusCode":"200","headers":[{"uuid":"97c5d331-57a7-11e9-8991-b9a4a4d61b6e","key":"Content-Type","value":"application/json; charset=UTF-8"},{"uuid":"97c5d332-57a7-11e9-8991-b9a4a4d61b6e","key":"Authorization","value":"Basic YWRtaW5AYWRtaW4uY29tOnBhc3N3b3Jk"},{"uuid":"97c5d333-57a7-11e9-8991-b9a4a4d61b6e","key":"Access-Control-Allow-Methods","value":"GET, POST, PUT, DELETE, OPTIONS"},{"uuid":"97c5d334-57a7-11e9-8991-b9a4a4d61b6e","key":"Access-Control-Allow-Origin","value":"*"},{"uuid":"97c5d335-57a7-11e9-8991-b9a4a4d61b6e","key":"Cache-Control","value":"no-cache, no-store, max-age=0, must-revalidate"},{"uuid":"97c5d336-57a7-11e9-8991-b9a4a4d61b6e","key":"Pragma","value":"no-cache"},{"uuid":"97c5d337-57a7-11e9-8991-b9a4a4d61b6e","key":"Transfer-Encoding","value":"chunked"}],"file":null,"duplicates":[]}],"modifiedAt":null,"duplicates":[],"proxyMode":false,"proxyHost":"localhost:8080/pa165/rest/users","https":false,"cors":true,"headers":[{"uuid":"05c2aa82-4410-11e9-9567-939b426a252f","key":"Content-Type","value":"application/json"},{"uuid":"5db2b640-74d5-11e9-a8d9-8bfe60457979","key":"Access-Control-Allow-Origin","value":"*"},{"uuid":"5db2b641-74d5-11e9-a8d9-8bfe60457979","key":"Access-Control-Allow-Methods","value":"GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"},{"uuid":"5db2b642-74d5-11e9-a8d9-8bfe60457979","key":"Access-Control-Allow-Headers","value":"Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"}],"instance":null,"running":false,"startedAt":null,"needRestart":false}]}
+{
+    "id": "mockoon_export",
+    "appVersion": "1.4.0",
+    "checksum": "61d32d094dcf2cb837494ec68c408278",
+    "subject": "full",
+    "data": [
+        {
+            "uuid": "23c83b40-7f10-11e9-b000-7ba5aa0c022d",
+            "name": "createSpacecraftUITest",
+            "endpointPrefix": "pa165/rest",
+            "latency": 0,
+            "port": 8081,
+            "routes": [
+                {
+                    "uuid": "23c83b45-7f10-11e9-b000-7ba5aa0c022d",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "spacecrafts",
+                    "body": "[\r\n  {\r\n    \"id\":1,\r\n    \"type\":\"Manned spacecraft\",\r\n    \"name\":\"Apollo 11\",\r\n    \"components\":[\r\n      {\r\n        \"id\":1,\r\n        \"readyToUse\":false,\r\n        \"name\":\"Wing\",\r\n        \"readyDate\":\"2019-04-10T15:30:00.364+02:00[Europe/Prague]\"\r\n      },\r\n      {\r\n        \"id\":2,\r\n        \"readyToUse\":true,\r\n        \"name\":\"Fuel tank\",\r\n        \"readyDate\":null\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"id\":2,\r\n    \"type\":\"Supply rocket\",\r\n    \"name\":\"Falcon 9\",\r\n    \"components\":[\r\n      {\r\n        \"id\":3,\r\n        \"readyToUse\":false,\r\n        \"name\":\"Engine\",\r\n        \"readyDate\":\"2019-05-15T15:30:00.841+02:00[Europe/Prague]\"\r\n      }\r\n    ]\r\n  },\r\n  {\r\n    \"id\":3,\r\n    \"type\":\"Smuggler ship\",\r\n    \"name\":\"Millenium falcon\",\r\n    \"components\":[\r\n      {\r\n        \"id\":4,\r\n        \"readyToUse\":true,\r\n        \"name\":\"Cockpit\",\r\n        \"readyDate\":null\r\n      }\r\n    ]\r\n  }\r\n]",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "23c83b46-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Content-Type",
+                            "value": "application/json; charset=UTF-8"
+                        },
+                        {
+                            "uuid": "23c83b47-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Authorization",
+                            "value": "Basic YWRtaW5AYWRtaW4uY29tOnBhc3N3b3Jk"
+                        },
+                        {
+                            "uuid": "23c83b48-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE, OPTIONS"
+                        },
+                        {
+                            "uuid": "23c83b49-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "uuid": "23c83b4a-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Cache-Control",
+                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                        },
+                        {
+                            "uuid": "23c83b4b-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Pragma",
+                            "value": "no-cache"
+                        },
+                        {
+                            "uuid": "23c83b4c-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Transfer-Encoding",
+                            "value": "chunked"
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "23c83b4d-7f10-11e9-b000-7ba5aa0c022d",
+                    "documentation": "",
+                    "method": "post",
+                    "endpoint": "spacecrafts",
+                    "body": "{\r\n  \"id\": 4,\r\n  \"type\":\"General Kenobi\",\r\n  \"name\":\"Hello there...\",\r\n  \"components\": [\r\n    {\r\n      \"id\": 5,\r\n      \"readyToUse\": true,\r\n      \"name\": \"Wheels\",\r\n      \"readyDate\": null\r\n    }\r\n  ]\r\n}",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "23c83b4e-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Content-Type",
+                            "value": "application/json; charset=UTF-8"
+                        },
+                        {
+                            "uuid": "23c83b4f-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Authorization",
+                            "value": "Basic YWRtaW5AYWRtaW4uY29tOnBhc3N3b3Jk"
+                        },
+                        {
+                            "uuid": "23c83b50-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE, OPTIONS"
+                        },
+                        {
+                            "uuid": "23c83b51-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "uuid": "23c83b52-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Cache-Control",
+                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                        },
+                        {
+                            "uuid": "23c83b53-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Pragma",
+                            "value": "no-cache"
+                        },
+                        {
+                            "uuid": "23c83b54-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Transfer-Encoding",
+                            "value": "chunked"
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                },
+                {
+                    "uuid": "23c83b55-7f10-11e9-b000-7ba5aa0c022d",
+                    "documentation": "",
+                    "method": "get",
+                    "endpoint": "craftComponents/available",
+                    "body": "[\r\n  {\r\n    \"id\":5,\r\n    \"readyToUse\":true,\r\n    \"name\":\"Wings\",\r\n    \"readyDate\":null\r\n  },\r\n  {\r\n    \"id\":6,\r\n    \"readyToUse\":true,\r\n    \"name\":\"Wheels\",\r\n    \"readyDate\":null\r\n  }\r\n]",
+                    "latency": 0,
+                    "statusCode": "200",
+                    "headers": [
+                        {
+                            "uuid": "23c83b56-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Content-Type",
+                            "value": "application/json; charset=UTF-8"
+                        },
+                        {
+                            "uuid": "23c83b57-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Authorization",
+                            "value": "Basic YWRtaW5AYWRtaW4uY29tOnBhc3N3b3Jk"
+                        },
+                        {
+                            "uuid": "23c83b58-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Access-Control-Allow-Methods",
+                            "value": "GET, POST, PUT, DELETE, OPTIONS"
+                        },
+                        {
+                            "uuid": "23c83b59-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Access-Control-Allow-Origin",
+                            "value": "*"
+                        },
+                        {
+                            "uuid": "23c83b5a-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Cache-Control",
+                            "value": "no-cache, no-store, max-age=0, must-revalidate"
+                        },
+                        {
+                            "uuid": "23c83b5b-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Pragma",
+                            "value": "no-cache"
+                        },
+                        {
+                            "uuid": "23c83b5c-7f10-11e9-b000-7ba5aa0c022d",
+                            "key": "Transfer-Encoding",
+                            "value": "chunked"
+                        }
+                    ],
+                    "filePath": "",
+                    "sendFileAsBody": false
+                }
+            ],
+            "modifiedAt": "2019-05-25T17:11:37.888Z",
+            "proxyMode": false,
+            "proxyHost": "localhost:8080/pa165/rest/users",
+            "https": false,
+            "cors": true,
+            "headers": [
+                {
+                    "uuid": "23c83b41-7f10-11e9-b000-7ba5aa0c022d",
+                    "key": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "uuid": "23c83b42-7f10-11e9-b000-7ba5aa0c022d",
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "*"
+                },
+                {
+                    "uuid": "23c83b43-7f10-11e9-b000-7ba5aa0c022d",
+                    "key": "Access-Control-Allow-Methods",
+                    "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+                },
+                {
+                    "uuid": "23c83b44-7f10-11e9-b000-7ba5aa0c022d",
+                    "key": "Access-Control-Allow-Headers",
+                    "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+                }
+            ]
+        }
+    ]
+}
